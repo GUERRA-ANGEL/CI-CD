@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>To-Do List - Gestor de tareas</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main class="container">
+			<h1>Gestor de tareas</h1>
+
+			<form id="task-form" class="task-form">
+				<input id="task-title" type="text" placeholder="Nueva tarea..." required />
+				<select id="task-priority" aria-label="Prioridad">
+					<option value="low">Baja</option>
+					<option value="medium" selected>Media</option>
+					<option value="high">Alta</option>
+				</select>
+				<button type="submit">Agregar</button>
+			</form>
+
+			<div class="controls">
+				<div class="filters">
+					<button class="filter-btn active" data-filter="all">Todas</button>
+					<button class="filter-btn" data-filter="pending">Pendientes</button>
+					<button class="filter-btn" data-filter="done">Hechas</button>
+				</div>
+				<div class="sort">
+					<label>Ordenar por prioridad</label>
+					<button id="sort-toggle">Alternar</button>
+				</div>
+			</div>
+
+			<ul id="task-list" class="task-list" aria-live="polite"></ul>
+		</main>
+
+		<script src="scripts.js"></script>
+	</body>
+</html>

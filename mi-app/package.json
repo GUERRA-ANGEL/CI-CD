@@ -1,0 +1,10 @@
+{
+	"name": "mi-app-todo",
+	"version": "1.0.0",
+	"description": "To-Do List simple (Gestor de tareas con prioridad)",
+	"scripts": {
+		"test": "echo \"No tests configured. Abre index.html en el navegador.\" && exit 0"
+	},
+	"author": "",
+	"license": "MIT"
+}

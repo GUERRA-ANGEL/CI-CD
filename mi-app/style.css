@@ -1,0 +1,40 @@
+ :root{
+	 --bg:#f7f7fb;
+	 --card:#ffffff;
+	 --muted:#666;
+	 --accent:#3b82f6;
+	 --success:#16a34a;
+	 --danger:#dc2626;
+ }
+ *{box-sizing:border-box}
+ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); margin:0; color:#111}
+ .container{max-width:720px;margin:32px auto;padding:20px}
+ h1{text-align:center;margin-bottom:16px}
+ .task-form{display:flex;gap:8px;margin-bottom:12px}
+ .task-form input[type='text']{flex:1;padding:8px;border-radius:6px;border:1px solid #ddd}
+ .task-form select{padding:8px;border-radius:6px;border:1px solid #ddd}
+ .task-form button{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+ .controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+ .filters{display:flex;gap:6px}
+ .filter-btn{background:transparent;border:1px solid transparent;padding:6px 10px;border-radius:6px;cursor:pointer}
+ .filter-btn.active{background:#e6f0ff;border-color:var(--accent);color:var(--accent)}
+ .task-list{list-style:none;padding:0;margin:0}
+ .task-item{display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:8px;background:var(--card);margin-bottom:8px;border:1px solid #eee}
+ .task-left{display:flex;gap:12px;align-items:center}
+ .task-left input[type='checkbox']{width:18px;height:18px}
+ .task-title{font-size:16px}
+ .task-title.done{text-decoration:line-through;color:var(--muted)}
+ .task-meta{font-size:12px;color:var(--muted)}
+ .task-actions{display:flex;gap:8px}
+ .btn{background:transparent;border:1px solid #ddd;padding:6px 8px;border-radius:6px;cursor:pointer}
+ .btn.edit{background:#fff}
+ .btn.delete{border-color:var(--danger);color:var(--danger)}
+ .priority-badge{padding:6px 8px;border-radius:999px;font-size:12px}
+ .priority-low{background:#ecfccb;color:#365314}
+ .priority-medium{background:#fff7ed;color:#92400e}
+ .priority-high{background:#fee2e2;color:#7f1d1d}
+ 
+ @media (max-width:520px){
+	 .task-form{flex-direction:column}
+	 .controls{flex-direction:column;align-items:stretch;gap:8px}
+ }
